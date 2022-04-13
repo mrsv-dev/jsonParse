@@ -17,17 +17,24 @@ namespace DeserializeExtra
         {
             foreach (var period in root.Periods)
             {
-                var param = new Params()
+                if (period.IsValidPayment == false)
                 {
-                    requestDate = DateTime.Now.ToString(),
-                    countPartner = root.Periods.Count,
-                    partnerId = period.Id,
-                    isValidRules = period.IsValidPayment,
-                    PaymentMethod = period.PaymentMethod
-                };
-                string serializedAnswer = JsonConvert.SerializeObject(param);
-                _logger.Information(serializedAnswer);
-                myCollection.Add(param);
+                    var param = new Params()
+                    {
+                        requestDate = DateTime.Now.ToString(),
+                        countPartner = root.Periods.Count,
+                        partnerId = period.Id,
+                        isValidRules = period.IsValidPayment,
+                        PaymentMethod = period.PaymentMethod
+                    };
+                    string serializedAnswer = JsonConvert.SerializeObject(param);
+                    _logger.Information(serializedAnswer);
+                    myCollection.Add(param);
+                }
+                else
+                {
+
+                }
             }
         }
     }
