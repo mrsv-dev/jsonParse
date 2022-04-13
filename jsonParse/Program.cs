@@ -76,10 +76,8 @@ namespace DeserializeExtra
                                     ]
                                 }";
 
-            Period myDeserializedClass = System.Text.Json.JsonSerializer.Deserialize<Period>(jsonString);
             Root root = System.Text.Json.JsonSerializer.Deserialize<Root>(jsonString);
-            Period period = System.Text.Json.JsonSerializer.Deserialize<Period>(jsonString);
-            MyLogger(root, period);
+            MyLogger(root);
 
             Console.ReadKey(true);
         }
