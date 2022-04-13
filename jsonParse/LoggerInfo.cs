@@ -22,7 +22,7 @@ namespace DeserializeExtra
                     var param = new Params()
                     {
                         requestDate = DateTime.Now.ToString(),
-                        countPartner = root.Periods.Count,
+                       // countPartner = root.Periods.Count,
                         partnerId = period.Id,
                         isValidRules = period.IsValidPayment,
                         PaymentMethod = period.PaymentMethod
@@ -33,7 +33,7 @@ namespace DeserializeExtra
                 }
                 else
                 {
-
+                    
                 }
             }
         }
