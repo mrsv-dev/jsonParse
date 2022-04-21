@@ -13,5 +13,9 @@
         public string PaymentMethod { get; set; }
         public string ManagerName { get; set; }
         public string AffType { get; set; }
+        public string affName { get; set; }
+        public string amount { get; set; }
+        public string pBalance { get; set; }
+        public string firstUnpaid { get; set; }
     }
 }

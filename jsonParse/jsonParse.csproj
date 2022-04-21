@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ChoETL" Version="1.2.1.47" />
+    <PackageReference Include="ChoETL.JSON" Version="1.2.1.47" />
+    <PackageReference Include="ChoETL.NETStandard" Version="1.2.1.47" />
+    <PackageReference Include="MySql.Data" Version="8.0.28" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Npgsql" Version="6.0.4" />
     <PackageReference Include="Serilog" Version="2.10.0" />
