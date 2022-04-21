@@ -14,8 +14,8 @@ namespace DeserializeExtra
         private static List<Params> myCollection = new List<Params>();
         public static readonly ILogger _logger = new LoggerConfiguration().WriteTo.RollingFile(pathFormat: "Log_request.json")
                                                               .WriteTo.Console()
-                                                               .WriteTo.Debug()
-                                                             .CreateLogger();
+                                                              .WriteTo.Debug()
+                                                              .CreateLogger();
 
         public static void MyLogger(Root root)
         {
@@ -43,11 +43,11 @@ namespace DeserializeExtra
                     _logger.Information(serializedAnswer);
                     myCollection.Add(param);
 
-                    NpgsqlConnection npgSqlConnection = ConnectToPostgres();
+                    // NpgsqlConnection npgSqlConnection = ConnectToPostgres();
 
                     InsertToMysql(period);
 
-                   // InsertToPostgres(period, npgSqlConnection);
+                    // InsertToPostgres(period, npgSqlConnection);
                 }
                 else
                 {
